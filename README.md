@@ -1,1 +1,94 @@
 # koicha
+
+**koicha** is a Kafka TUI written in Go with [Bubble Tea](https://github.com/charmbracelet/bubbletea).
+
+The project is currently in early development. Most features are still being designed, prototyped, or implemented.
+
+## What is koicha?
+
+`koicha` is a terminal UI for working with Apache Kafka.
+
+The goal of the project is to make routine Kafka tasks simpler, faster, and more pleasant for everyone who works with Kafka.
+
+Kafka tooling can often feel scattered, noisy, or overloaded.  
+`koicha` is meant to be the opposite: simple, focused, and friendly to use.
+
+Working with Kafka is often a daily routine - and `koicha` aims to make that routine feel a little more like tea time: familiar, calm, and enjoyable.
+
+## Why the name?
+
+**Koicha** is a thick and concentrated style of matcha tea.
+
+The name reflects the idea behind the project: a concentrated Kafka experience inside the terminal.
+
+A dense little cup of Kafka.
+
+## Bundles
+
+One of the core ideas behind `koicha` is the **bundle**.
+
+A bundle is a portable set of Kafka connection and workspace configuration that can be imported, exported, and shared.
+
+Bundles are designed to make it easy to:
+
+- keep separate profiles for different environments, such as `prod`, `test`, and `dev`
+- switch between Kafka clusters quickly
+- share ready-to-use configurations with a team
+- limit the visible workspace to the topics and consumer groups that matter for a specific team or project
+
+For example, a development team may own only a specific set of topics and consumer groups. In that case, a bundle can define a focused workspace containing only those resources.
+
+This helps reduce noise and makes Kafka easier to use for people who don't need to see the entire cluster.
+
+When needed, users should still be able to leave the bundle scope and inspect other resources available on the same bootstrap server.
+
+## Planned features
+
+`koicha` is still in the design and prototyping stage. All listed features are currently **WIP**.
+
+| Feature | Status |
+|---|---|
+| Bundles | WIP |
+| Broker overview | WIP |
+| Topic listing and metadata | WIP |
+| Partition and offset inspection | WIP |
+| Consumer group listing and metadata | WIP |
+| Convenient offset reset flows | WIP |
+| Reading messages from topics | WIP |
+| Producing messages to topics | WIP |
+| Quick switching between environments and profiles | WIP |
+| Common Kafka authentication methods | WIP |
+
+### Authentication
+
+Planned authentication support includes:
+
+| Method | Status |
+|---|---|
+| Plaintext | WIP |
+| Username/password | WIP |
+| Certificate-based authentication | WIP |
+| Username/password with certificates | WIP |
+
+## Platform support
+
+The goal is to make `koicha` available on major platforms:
+
+- Linux
+- macOS
+- Windows
+
+## Status
+
+🚧 **Work in progress**
+
+`koicha` is not production-ready yet.
+
+The project is currently mostly in the design and prototyping phase. APIs, UI, configuration format, behavior, and feature scope may change at any time.
+
+## Tech stack
+
+- Go
+- Bubble Tea
+- franz-go
+
