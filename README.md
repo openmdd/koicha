@@ -59,16 +59,18 @@ When needed, users should still be able to leave the bundle scope and inspect ot
 | Quick switching between environments and profiles | WIP |
 | Common Kafka authentication methods | WIP |
 
-### Authentication
+## Authentication
 
-Planned authentication support includes:
+Must have:
+- PLAINTEXT
+- SASL_SSL with username/password
+- SASL_SSL with SCRAM
+- SSL/TLS with optional CA certificate
 
-| Method | Status |
-|---|---|
-| Plaintext | WIP |
-| Username/password | WIP |
-| Certificate-based authentication | WIP |
-| Username/password with certificates | WIP |
+Later:
+- mTLS with client certificate
+- SASL_SSL + client certificate
+- OAuth / Kerberos
 
 ## Platform support
 
@@ -91,4 +93,3 @@ The project is currently mostly in the design and prototyping phase. APIs, UI, c
 - Go
 - Bubble Tea
 - franz-go
-
