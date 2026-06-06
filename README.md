@@ -1,6 +1,6 @@
 # koicha
 
-**koicha** is a Kafka TUI written in Go with [Bubble Tea](https://github.com/charmbracelet/bubbletea).
+**koicha** is a Kafka TUI written in Go with [Bubble Tea](https://charm.land/bubbletea).
 
 The project is currently in early development. Most features are still being designed, prototyped, or implemented.
 
@@ -23,24 +23,24 @@ The name reflects the idea behind the project: a concentrated Kafka experience i
 
 A dense little cup of Kafka.
 
-## Bundles
+## Bento
 
-One of the core ideas behind `koicha` is the **bundle**.
+One of the core ideas behind `koicha` is the **bento**.
 
-A bundle is a portable set of Kafka connection and workspace configuration that can be imported, exported, and shared.
+A bento is a portable set of Kafka connection and workspace configuration that can be imported, exported, and shared.
 
-Bundles are designed to make it easy to:
+Bento profiles are designed to make it easy to:
 
 - keep separate profiles for different environments, such as `prod`, `test`, and `dev`
 - switch between Kafka clusters quickly
 - share ready-to-use configurations with a team
 - limit the visible workspace to the topics and consumer groups that matter for a specific team or project
 
-For example, a development team may own only a specific set of topics and consumer groups. In that case, a bundle can define a focused workspace containing only those resources.
+For example, a development team may own only a specific set of topics and consumer groups. In that case, a bento can define a focused workspace containing only those resources.
 
 This helps reduce noise and makes Kafka easier to use for people who don't need to see the entire cluster.
 
-When needed, users should still be able to leave the bundle scope and inspect other resources available on the same bootstrap server.
+When needed, users should still be able to leave the bento scope and inspect other resources available on the same bootstrap server.
 
 ## Planned features
 
@@ -48,7 +48,7 @@ When needed, users should still be able to leave the bundle scope and inspect ot
 
 | Feature | Status |
 |---|---|
-| Bundles | WIP |
+| Bento profiles | WIP |
 | Broker overview | WIP |
 | Topic listing and metadata | WIP |
 | Partition and offset inspection | WIP |
@@ -91,5 +91,7 @@ The project is currently mostly in the design and prototyping phase. APIs, UI, c
 ## Tech stack
 
 - Go
-- Bubble Tea
+- Bubble Tea v2 (`charm.land/bubbletea/v2`)
+- Bubbles v2 (`charm.land/bubbles/v2`)
+- Lip Gloss v2 (`charm.land/lipgloss/v2`)
 - franz-go
